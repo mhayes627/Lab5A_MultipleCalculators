@@ -8,7 +8,7 @@
         android:id="@+id/miles_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fTemp_text"
+        android:text="@string/miles_text"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/miles_input"
         app:layout_constraintEnd_toStartOf="@+id/miles_input" />
@@ -28,7 +28,7 @@
         android:id="@+id/kilo_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cTemp_text"
+        android:text="@string/kilometers_text"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/kilo_input"
         app:layout_constraintEnd_toStartOf="@+id/guideline2" />

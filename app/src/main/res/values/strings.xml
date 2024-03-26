@@ -8,5 +8,8 @@
 
     <string name="fTemp_text">Fahrenheit:</string>
     <string name="cTemp_text">Celsius:</string>
+
+    <string name="miles_text">Miles:</string>
+    <string name="kilometers_text">Kilometers:</string>
     <string name="convert_button">Convert</string>
 </resources>
