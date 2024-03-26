@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab5A_MultipleCalculators</string>
+    <string name="bill_text">Total Bill:</string>
+    <string name="percent_text">Tip Percentage:</string>
+    <string name="people_text">Number of People:</string>
+    <string name="total_text">Total Per Person: %1$s</string>
+    <string name="calculate_button">Calculate</string>
+
+    <string name="fTemp_text">Fahrenheit:</string>
+    <string name="cTemp_text">Celsius:</string>
+    <string name="convert_button">Convert</string>
+</resources>
