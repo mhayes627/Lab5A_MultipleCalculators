@@ -29,13 +29,13 @@ public class TabLayoutAdapter extends FragmentStateAdapter {
                 return tipFragment;
             case 1:
                 Fragment tempFragment = new TempFragment();
-                args.putInt(TipFragment.ARG_ID, position);
+                args.putInt(TempFragment.ARG_ID, position);
                 tempFragment.setArguments(args);
 
                 return tempFragment;
             case 2:
                 Fragment distanceFragment = new DistanceFragment();
-                args.putInt(TipFragment.ARG_ID, position);
+                args.putInt(DistanceFragment.ARG_ID, position);
                 distanceFragment.setArguments(args);
 
                 return distanceFragment;
