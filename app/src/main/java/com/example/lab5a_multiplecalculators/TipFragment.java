@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,26 +35,28 @@ public class TipFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        // Get numeric ID from parameter list
-        Bundle args = getArguments();
-        String id = Integer.toString(args.getInt(ARG_ID));
+        binding.calButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bill_input = binding.billInput.getText().toString();
+                percent_input =  binding.percentInput.getText().toString();
+                people_input = binding.peopleInput.getText().toString();
+
+                if (isValidCheck()){
+                    calculateTotal();
+                }
+                else{
+                    Toast toast = Toast.makeText(binding.getRoot().getContext(), "ERROR", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+        });
 
     }
 
-//    public void onClick(View v) {
-//        bill_input = binding.billInput.getText().toString();
-//        percent_input =  binding.percentInput.getText().toString();
-//        people_input = binding.peopleInput.getText().toString();
-//
-//        if (isValidCheck()){
-//            calculateTotal();
-//        }
-//    }
-
     public boolean isValidCheck(){
-
         if (bill_input.isEmpty() || percent_input.isEmpty()
-                || people_input.isEmpty()){
+            || people_input.isEmpty()){
             return false;
         }
         else if (bill_input.equals(".")){
@@ -73,7 +76,7 @@ public class TipFragment extends Fragment {
             total = ((bill * percent / 100) + bill) / people;
             totalFormat = NumberFormat.getCurrencyInstance().format(total);
 
-            //binding.totalText.setText(getResources().getString(R.string.total_text, totalFormat));
+            binding.totalText.setText(getResources().getString(R.string.total_text, totalFormat));
         }
     }
 }

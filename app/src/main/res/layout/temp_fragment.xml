@@ -5,16 +5,16 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/miles_text"
+        android:id="@+id/fTemp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fTemp_text"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/miles_input"
-        app:layout_constraintEnd_toStartOf="@+id/miles_input" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/f_input"
+        app:layout_constraintEnd_toStartOf="@+id/f_input" />
 
     <EditText
-        android:id="@+id/miles_input"
+        android:id="@+id/f_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -25,16 +25,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/kilo_text"
+        android:id="@+id/cTemp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cTemp_text"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/kilo_input"
+        app:layout_constraintBaseline_toBaselineOf="@+id/c_input"
         app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
     <EditText
-        android:id="@+id/kilo_input"
+        android:id="@+id/c_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -42,7 +42,7 @@
         android:ems="10"
         android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/miles_input" />
+        app:layout_constraintTop_toBottomOf="@+id/f_input" />
 
     <Button
         android:id="@+id/convert_button"
@@ -53,7 +53,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kilo_input" />
+        app:layout_constraintTop_toBottomOf="@+id/c_input" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
